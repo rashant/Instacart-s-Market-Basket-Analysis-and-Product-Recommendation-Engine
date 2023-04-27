@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+body,h1 {font-family: "Raleway", sans-serif}
+body, html {height: 100%}
+.bgimg {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.6)) ,url('https://cdn.arstechnica.net/wp-content/uploads/2018/11/GettyImages-458005228.jpg');
+    min-height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+h1 {
+  width: 100%;
+  text-shadow: 2px 2px 5px red;
+}
+.title{
+    font-weight: bold;
+    font-size: 24;
+    border-width: 0 0 3px;
+    border-style: solid;
+}
+.textarea-font{
+    font-size: 24;
+}
+
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding:8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.button1 {
+  background-color: white;
+  color: black;
+  border: 2px solid #4CAF50;
+}
+
+.button1:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.flex-container {
+    display: flex;
+}
+
+.flex-child-1{
+    margin-right: 50px;
+}   
+
+.flex-child{
+    flex: 3;
+}   
+
+</style>
+<body>
+
+<div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+  <div class="flex-container">
+    <div class="flex-child-1">
+      <img src="https://static.businessworld.in/article/article_extra_large_image/1658591863_GCn2sM_instacart.jpg" alt="logo" width="280" height="100">
+   </div>
+   <div>
+     <h1 class="flex-child w3-xxlarge w3-animate-top w3-text-white title">Instacart Product Recommendation Engine</h1>
+   </div>
+  </div>
+  
+  <div class="w3-display-middle" style="width:25%; border-width: 2px; border-style: solid; border-color: black; border-radius:10px">
+      <div class="w3-bar w3-black">
+      </div>
+    <!-- Tabs -->
+    <div id="Flight" class="w3-container w3-white w3-padding-16 myLink " style="border-radius:10px">
+      <h3>User ID</h3>
+      <form action="/predict" method="POST" class ="form">
+      <div class="w3-row-padding" style="margin:0 -16px;">
+        <div style="margin:0 8px">
+          <textarea class="w3-input w3-border textarea-font" name="user_id" rows="1" cols="12" placeholder="Existing User ID range [1 - 206209]"></textarea>
+        </div>
+      </div>
+      <p><input class="button w3-left button1:hover button1" type="submit" value="Submit"></p>
+      </form>
+    </div>
+</div>
+
+</body>
+</html>
